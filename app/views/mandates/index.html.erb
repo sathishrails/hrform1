@@ -1,0 +1,23 @@
+<h1>Listing mandates</h1>
+
+<table>
+  <tr>
+    <th>Designation</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mandates.each do |mandate| %>
+  <tr>
+    <td><%= mandate.designation %></td>
+    <td><%= link_to 'Show', mandate %></td>
+    <td><%= link_to 'Edit', edit_mandate_path(mandate) %></td>
+    <td><%= link_to 'Destroy', mandate, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Mandate', new_mandate_path %>

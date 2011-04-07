@@ -1,0 +1,29 @@
+<%= form_for(@mandate) do |f| %>
+  <% if @mandate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mandate.errors.count, "error") %> prohibited this mandate from being saved:</h2>
+
+      <ul>
+      <% @mandate.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :designation %><br />
+    <%= f.text_field :designation %>
+  </div>
+
+  <div class="field">
+   <%= add_interview_link ("Add Interview") %>
+  </div>
+
+  <div id="result_interview">
+  </div>
+ 
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
