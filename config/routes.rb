@@ -1,4 +1,8 @@
 Hrform1::Application.routes.draw do
+  resources :companies
+
+  resources :comments
+
   devise_for :users
 
     root :to => "mandates#index"

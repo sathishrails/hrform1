@@ -10,11 +10,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110406100559) do
+ActiveRecord::Schema.define(:version => 20110407185045) do
 
   create_table "applicants", :force => true do |t|
     t.integer  "Interview_id"
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comments", :force => true do |t|
+    t.string   "name"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "email"
+    t.string   "photo"
+  end
+
+  create_table "companies", :force => true do |t|
+    t.string   "name"
+    t.text     "address"
+    t.text     "domain"
+    t.integer  "no_of_employee"
+    t.string   "iso_standard"
+    t.string   "cmmi_level"
+    t.integer  "no_of_branch"
+    t.string   "email"
+    t.integer  "phone_no"
+    t.string   "website"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

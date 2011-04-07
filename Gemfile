@@ -9,6 +9,7 @@ gem 'mysql2'
 gem 'devise'
 # Use unicorn as the web server
 # gem 'unicorn'
+gem 'gravatar-ultimate'
 
 # Deploy with Capistrano
 # gem 'capistrano'
