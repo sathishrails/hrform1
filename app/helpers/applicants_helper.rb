@@ -1,3 +1,2 @@
 module ApplicantsHelper
-
 end
