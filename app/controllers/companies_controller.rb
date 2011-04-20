@@ -3,6 +3,7 @@ class CompaniesController < ApplicationController
   # GET /companies.xml
   def index
     @companies = Company.all
+   @json = Company.all.to_gmaps4rails
 
     respond_to do |format|
       format.html # index.html.erb

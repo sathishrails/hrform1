@@ -1,3 +1,4 @@
 class Applicant < ActiveRecord::Base
-  belongs_to :Interview
+  belongs_to :interview
+  has_many :results
 end

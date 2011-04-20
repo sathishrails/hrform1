@@ -1,3 +1,10 @@
+
+		<%= link_to 'Home', '# '%></p></li>
+		<%= link_to 'Mandate' , mandates_path %>
+		<%= link_to 'Interview' , interviews_path %>
+		<%= link_to 'Applicant' , applicants_path %>
+		<%= link_to 'Comment' , comments_path %>
+		<%= link_to 'Company' , companies_path %>
 <h1>Listing companies</h1>
 
 <table>
@@ -39,3 +46,4 @@
 <br />
 
 <%= link_to 'New Company', new_company_path %>
+ <%= gmaps4rails(@json) %>

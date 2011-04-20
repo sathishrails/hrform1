@@ -1,29 +1,17 @@
 $(document).ready(function(){
-  $('.add_interview').click(function(){
-	    $.ajax({
+  $('.interview_class').change(function(){
+	//alert('gai');
+  	var interview_value = $('#interview_id').val();		
+	 $.ajax({
 		   type:"POST",
-		   url:'/mandates/add_interviews',
-		   data:"",
+		   url:'/mandates/select_interview',
+		   data:"server_value="+interview_value,
 		   success: function(data){
-			$(data).appendTo('#result_interview');
-		         $('.sample').click(function(){			 										   					$('#mandate_new_interview_attributes__conducting_date').datepicker(); 
-			});
-			$('.add_applicant_class').click(function(){
-			//alert('hai');
-				$.ajax({
-					  url: "/mandates/add_applicants",
-					  method: 'POST',
-		  			  data: '',
-			 		 success: function(data){
-       						   $(data).appendTo('#result_interview');
-						   //alert('I am present');
-						}
-					
-				 });
-			});
-			
-		 }
- 	});
+			  $('#applicant_id').empty();
+				       $(data).appendTo('#applicant_id');
+			 }
+		
+	});
    });
 });
 

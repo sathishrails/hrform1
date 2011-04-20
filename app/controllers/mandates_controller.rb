@@ -3,6 +3,9 @@ class MandatesController < ApplicationController
   # GET /mandates.xml
   def index
     @mandates = Mandate.all
+  @interview = []
+ #controller code
+  
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,6 +16,10 @@ class MandatesController < ApplicationController
   # GET /mandates/1
   # GET /mandates/1.xml
   def show
+
+
+
+
     @mandate = Mandate.find(params[:id])
 
     respond_to do |format|
@@ -80,10 +87,11 @@ class MandatesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  def select_interview
+   @interview= Interview.find(params[:server_value])
+   render :partial => 'applicant_select', :locals => { :interviews => @interview.applicants}
+   end
 
-  def add_interviews
-    render :partial => 'interviews', :locals => {:interview_object => Interview.new}
-  end
   def add_applicants
      render :partial => 'applicants', :locals => {:applicant_object => Applicant.new}
   end

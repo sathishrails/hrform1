@@ -1,3 +1,11 @@
+<div id = "ralign">
+		<%= link_to 'Home', '# '%></p></li>
+		<%= link_to 'Mandate' , mandates_path %>
+		<%= link_to 'Interview' , interviews_path %>
+		<%= link_to 'Applicant' , applicants_path %>
+		<%= link_to 'Comment' , comments_path %>
+		<%= link_to 'Company' , companies_path %>
+</div>
 <span id="comments_count"><%= pluralize(@comments.count, "Comment") %></span>
 <div id="comments">
   <%= render :partial => @comments, :locals => { :list => true } %>

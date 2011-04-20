@@ -1,3 +1,10 @@
+
+		<%= link_to 'Home', '# '%></p></li>
+		<%= link_to 'Mandate' , mandates_path %>
+		<%= link_to 'Interview' , interviews_path %>
+		<%= link_to 'Applicant' , applicants_path %>
+		<%= link_to 'Comment' , comments_path %>
+		<%= link_to 'Company' , companies_path %>
 <h1>Listing applicants</h1>
 
 <table>
@@ -11,7 +18,7 @@
 
 <% @applicants.each do |applicant| %>
   <tr>
-    <td><%= applicant.Interview.name %></td>
+    <td><%= applicant.interview.name%></td>
     <td><%= applicant.name %></td>
     <td><%= link_to 'Show', applicant %></td>
     <td><%= link_to 'Edit', edit_applicant_path(applicant) %></td>

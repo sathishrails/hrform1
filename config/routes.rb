@@ -8,7 +8,7 @@ Hrform1::Application.routes.draw do
     root :to => "mandates#index"
     resources :applicants
     resources :interviews
-  match "mandates/add_interviews" => "mandates#add_interviews"
+  match "mandates/select_interview" => "mandates#select_interview"
     match "mandates/add_applicants" => "mandates#add_applicants"
   resources :mandates
 

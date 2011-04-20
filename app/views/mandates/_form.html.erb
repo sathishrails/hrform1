@@ -15,15 +15,16 @@
     <%= f.label :designation %><br />
     <%= f.text_field :designation %>
   </div>
-
-  <div class="field">
-   <%= add_interview_link ("Add Interview") %>
+  <div class = "field">
+     <%= f.label :Conducting_date %><br />
+     <%= f.text_field :conducting_date%>	
   </div>
-
-  <div id="result_interview">
+ <div class = "field">
+    <%=collection_select :interview,:id , Interview.all, :id, :name ,{:prompt => "Select Interview "},{:class => 'interview_class', :name => 'mandate[new_interview_attributes][][id]' }%>
   </div>
- 
+  <div id="applicant_id">
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
+ <% end %>
